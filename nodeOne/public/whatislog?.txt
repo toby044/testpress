@@ -1,0 +1,28 @@
+Jeg bruger 
+  console.log(req.params);
+  console.log(req.body);
+  console.log(req.url);
+  console.log(req.query);
+til at skrive forskellige ting til loggen.
+
+?a=12&b=test&uv=false blev testet af niels, og returnerer 
+
+{}
+GET / 304 16.816 ms - -
+GET /stylesheets/style.css 304 1.328 ms - -
+{}
+{}
+/
+{}
+GET / 304 16.157 ms - -
+GET /stylesheets/style.css 304 1.121 ms - -
+{}
+{}
+/?a=12&b=test&uv=false
+{ a: '12', b: 'test', uv: 'false' }
+GET /?a=12&b=test&uv=false 200 10.100 ms - 170
+GET /stylesheets/style.css 304 0.704 ms - -
+{}
+
+
+Her får vi { a: '12', b: 'test', uv: 'false' } ud igen som et objekt.
